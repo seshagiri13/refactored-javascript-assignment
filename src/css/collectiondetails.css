@@ -1,0 +1,70 @@
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+}
+.navbar {
+	width: 100%;
+}
+.logo {
+	background-color: white;
+	width: 20%;
+}
+
+
+
+    #cover-caption {
+        width: 100%;
+    }
+    .logo {
+        background-color: white;
+        width: 20%; }
+
+        .navbar-nav > li {
+            padding-left: 52px;
+            padding-right: 97px;
+        }
+
+        #footer-main {
+            background: #222;
+            color: white;
+            font-size: 0.8rem;
+            padding: 2.5rem 0;
+        }
+
+        .list-social {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .list-font {
+            font-size: 1.0rem;
+        }
+        .contact {
+            width: 10%;
+        }
+
+       
+        .card-img-top {
+            height:50%;
+        }
+        .most-pop
+        {
+            margin-left: 0.5rem;
+            margin-bottom: 0.5rem;
+            margin-right: 0.5rem;
+        }
+        .most-pop
+        {
+            margin-left: 0.5rem;
+            margin-bottom: 0.5rem;
+            margin-right: 0.5rem;
+        }
+        #collection-Page
+        {
+         margin-top: 5%;
+         margin-bottom: 3%;
+          
+        }
+      

@@ -1,0 +1,133 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "collections": [
+    {
+      "id": "1",
+      "name": "lets test",
+      "Description": "Must visit in bengaluru",
+      "restaurants": [
+        {
+          "id": "18580202",
+          "Name": "1131 Bar + Kitchen",
+          "Img_Url": "https://b.zmtcdn.com/data/pictures/2/18580202/ed6fb49004a965f3ab2426fc80d4d579.jpg?output-format=webp",
+          "Description": "1131 Bar + Kitchen",
+          "cuisines": "Continental, Mediterranean, Italian, European, Modern Indian, Asian",
+          "city": "Bangalore"
+        },
+        {
+          "id": "2300979",
+          "Name": "Mocha ",
+          "Img_Url": "https://b.zmtcdn.com/data/reviews_photos/28e/e317c367678233a0b047237232ad928e_1520952702.jpg?output-format=webp",
+          "Description": "Mocha ",
+          "cuisines": "Cafe",
+          "city": "Kanpur"
+        },
+        {
+          "id": "18378852",
+          "Name": "Effingut Brewerkz",
+          "Img_Url": "https://b.zmtcdn.com/data/res_imagery/18378852_RESTAURANT_6abd62d7e9333c5416121975d95cb816.jpg",
+          "Description": "Effingut Brewerkz",
+          "cuisines": "Continental, North Indian, Mughlai, Burmese",
+          "city": "Pune"
+        },
+        {
+          "id": "206488",
+          "Name": "Maharaja Bhog",
+          "Img_Url": "https://b.zmtcdn.com/data/res_imagery/206488_RESTAURANT_66046ea534ad7f685cd4ba184d39e178.jpg?output-format=webp",
+          "Description": "Maharaja Bhog",
+          "cuisines": "Indian, Rajasthani",
+          "city": "Dubai"
+        },
+        {
+          "id": "18379660",
+          "Name": "Cafe Azzure",
+          "Img_Url": "https://b.zmtcdn.com/data/res_imagery/18379660_RESTAURANT_048602727d766e01701155830d7f045d.jpg?output-format=webp",
+          "Description": "Cafe Azzure",
+          "cuisines": "Cafe, Continental, Italian, Burger",
+          "city": "Bangalore"
+        },
+        {
+          "id": "51040",
+          "Name": "Truffles",
+          "Img_Url": "https://b.zmtcdn.com/data/pictures/chains/8/51038/c312bf371d4e0aea2021a1fd824054ed.jpg?output-format=webp",
+          "Description": "Truffles",
+          "cuisines": "Cafe, American, Burger, Steak",
+          "city": "Bangalore"
+        }
+      ]
+    },
+    {
+      "name": "my col",
+      "Description": "my col",
+      "restaurants": [
+        {
+          "id": "18038154",
+          "Name": "Panna Vilas Restaurant & Lounge",
+          "Img_Url": "https://b.zmtcdn.com/data/res_imagery/18038154_CHAIN_5b158b681a6e305f6d7d9626c895d9b6.jpg",
+          "Description": "Panna Vilas Restaurant & Lounge",
+          "cuisines": "North Indian, Italian, Chinese",
+          "city": "Udaipur"
+        },
+        {
+          "id": "57833",
+          "Name": "Big Pitcher",
+          "Img_Url": "https://b.zmtcdn.com/data/res_imagery/57833_RESTAURANT_f488ecad8c970d4459cddf4b58326e56.jpg",
+          "Description": "Big Pitcher",
+          "cuisines": "American, Continental, North Indian, Mediterranean, Salad, Steak",
+          "city": "Bangalore"
+        },
+        {
+          "id": "18536004",
+          "Name": "Culture - पुणे",
+          "Img_Url": "https://b.zmtcdn.com/data/pictures/4/18536004/5b53cb89b5374a4f9e113c413f0fc928.jpg",
+          "Description": "Culture - पुणे",
+          "cuisines": "Continental, North Indian, Italian, Mediterranean, European",
+          "city": "Pune"
+        },
+        {
+          "id": "59132",
+          "Name": "The Black Rabbit",
+          "Description": "The Black Rabbit",
+          "Img_Url": "https://b.zmtcdn.com/data/pictures/2/59132/18cca37cab0b7372adb7b07d28dd789a.jpg",
+          "cuisines": "Continental, Salad, Burger, Finger Food, Pizza",
+          "city": "Bangalore"
+        },
+        {
+          "id": "18463068",
+          "Name": "SushiNow",
+          "Description": "SushiNow",
+          "Img_Url": "https://b.zmtcdn.com/data/pictures/chains/2/18288332/5916981d6fbc6395e2c599581544f76e.jpg?output-format=webp",
+          "cuisines": "Japanese, Sushi",
+          "city": "Lisboa"
+        }
+      ],
+      "id": "QHPypSJ"
+    }
+  ],
+  "restaurants": [
+    {
+      "id": "18580202",
+      "Name": "1131 Bar + Kitchen",
+      "Img_Url": "https://b.zmtcdn.com/data/pictures/2/18580202/ed6fb49004a965f3ab2426fc80d4d579.jpg?output-format=webp",
+      "Description": "1131 Bar + Kitchen",
+      "cuisines": "Continental, Mediterranean, Italian, European, Modern Indian, Asian",
+      "city": "Bangalore"
+    }
+  ]
+}

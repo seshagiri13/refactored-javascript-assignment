@@ -1,9 +1,12 @@
 import 'jquery';
 import 'popper.js';
 import 'bootstrap/dist/js/bootstrap.min.js';
-var servicea  = require('./services');
-import './css/collectionitem.css';
-import './css/bootstrap.css';
+var servicea  = require('../service/services');
+import '../css/collectionitem.css';
+import '../css/bootstrap.css';
+import { createStore } from 'redux';
+
+
 
 
 window.onload = function(){

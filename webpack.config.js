@@ -3,11 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        index: "./src/index.js",
-        collectiondetails: "./src/collectiondetails.js",
-        restaurantdetails:"./src/restaurantdetails.js",
-        usercollection:"./src/usercollection.js",
-        collectionitems:"./src/collectionitem.js"
+        index: "./src/controller/indexcontroller.js",
+        collectiondetails: "./src/controller/collectiondetailscontroller.js",
+        restaurantdetails:"./src/controller/restaurantdetailscontroller.js",
+        usercollection:"./src/controller/usercollectioncontroller.js",
+        collectionitems:"./src/controller/collectionitemcontroller.js"
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -47,7 +47,14 @@ module.exports = {
         })
     ],
     module: {
-        rules: [{
+        rules: [
+            /*{
+                    enforce: 'pre',
+                     test: /\.js$/,
+                     exclude: /node_modules/,
+                      use: 'eslint-loader'
+                    },*/
+            {
             test: /\.js$/,
             exclude: /node_modules/,
             use: 'babel-loader'

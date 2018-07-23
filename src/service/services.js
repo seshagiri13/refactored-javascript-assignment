@@ -1,31 +1,6 @@
 
 let userKey = '90a96745b76dadf7a7e66bf0c24b2ae8';
 
-function saverestaurant(param) {
-    return new Promise(function (resolve, reject) {
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", 'http://localhost:3000/restaurants');
-        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        xhr.onload = function () {
-            if (this.status >= 200 && this.status < 300) {
-                resolve(xhr.response);
-            } else {
-                reject({
-                    status: this.status,
-                    statusText: xhr.statusText
-                });
-            }
-        };
-        xhr.onerror = function () {
-            reject({
-                status: this.status,
-                statusText: xhr.statusText
-            });
-        };
-        xhr.send(JSON.stringify(param));
-    });
-}
-
 function getallusercollection() {
     return new Promise(function (resolve, reject) {
         var xhr = new XMLHttpRequest();
@@ -159,7 +134,27 @@ function geteachusercollection(param) {
 
 function getcollectiondeatils(param, collectioname) {
 
-
+    /*return new Promise(function (resolve, reject) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", 'http://localhost:3000/collections/' + param);
+        xhr.onload = function () {
+            if (this.status >= 200 && this.status < 300) {
+                resolve(xhr.response);
+            } else {
+                reject({
+                    status: this.status,
+                    statusText: xhr.statusText
+                });
+            }
+        };
+        xhr.onerror = function () {
+            reject({
+                status: this.status,
+                statusText: xhr.statusText
+            });
+        };
+        xhr.send(null);
+    });*/
     var xmlHttp = new XMLHttpRequest();
     var params = param;
     xmlHttp.onreadystatechange = function () {
@@ -596,6 +591,5 @@ module.exports = {
     savecollection: savecollection,
     getcollectiondeatils: getcollectiondeatils,
     deleteCollection: deleteCollection,
-    updatecollection: updatecollection,
     searchresults:searchresults
 }

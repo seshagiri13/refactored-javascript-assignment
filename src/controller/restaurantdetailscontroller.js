@@ -2,15 +2,18 @@ import 'jquery';
 import 'popper.js';
 import 'bootstrap/dist/js/bootstrap.min.js';
 var servicea  = require('../service/services');
+var restdetailsview  = require('../views/restaurantdetailsview');
 import '../css/restaurantdetails.css';
 import '../css/bootstrap.css';
 
 
-window.onload = function () {
+window.onload = ()=> {
     let params = (new URL(document.location)).searchParams;
     let resid = params.get("resid");
-    servicea.getrestaurantdetails(resid);
-    document.getElementById("btnAdd").addEventListener("click", function (e) {
+    servicea.getrestaurantdetails(resid).then((data)=>{
+        restdetailsview.formatrestaurant(JSON.parse(data));
+    });
+    document.getElementById("btnAdd").addEventListener("click", (e)=> {
         e.preventDefault();
         servicea.getallusercollection().then(function (data) {
             let dropdown = document.getElementById('inputcoll');
@@ -40,21 +43,21 @@ window.onload = function () {
 
     });
 
-    document.getElementById("close").addEventListener("click", function (e) {
+    document.getElementById("close").addEventListener("click", (e)=> {
         e.preventDefault();
         var modal = document.getElementById("modal");
         modal.style.display = "none";
        
     });
 
-    document.getElementById("closebtn").addEventListener("click", function (e) {
+    document.getElementById("closebtn").addEventListener("click", (e)=> {
         e.preventDefault();
         var modal = document.getElementById("modal");
         modal.style.display = "none";
       
     });
 
-    document.getElementById("save").addEventListener("click", function (e) {
+    document.getElementById("save").addEventListener("click", (e)=> {
         e.preventDefault();
         var selid = document.getElementById("inputcoll");
         var strUser = selid.options[selid.selectedIndex].value;

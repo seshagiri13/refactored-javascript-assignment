@@ -2,6 +2,7 @@ import 'jquery';
 import 'popper.js';
 import 'bootstrap/dist/js/bootstrap.min.js';
 var servicea  = require('../service/services');
+var collitemview  = require('../views/collectionitemview');
 import '../css/collectionitem.css';
 import '../css/bootstrap.css';
 import { createStore } from 'redux';
@@ -9,12 +10,14 @@ import { createStore } from 'redux';
 
 
 
-window.onload = function(){
+window.onload = ()=>{
     let params = (new URL(document.location)).searchParams;
 var collid = params.get("collid");
 let collname = params.get("collname");
 document.getElementById("collid").title=collid;
-servicea.getcollectiondeatils(collid,collname);
+servicea.getcollectiondeatils(collid,collname).then((data)=>{
+    collitemview.formateachuserCollection(JSON.parse(data),collname);
+});
 var details;
 servicea.geteachusercollection(collid).then(function(data)
 {
@@ -22,7 +25,7 @@ servicea.geteachusercollection(collid).then(function(data)
 
 });
 
-document.getElementById("btnEdit").addEventListener("click",  function(e){
+document.getElementById("btnEdit").addEventListener("click",  (e)=>{
     e.preventDefault();
     let collid=e.target.parentElement.title;
   
@@ -32,18 +35,17 @@ document.getElementById("btnEdit").addEventListener("click",  function(e){
     modal.style.display="block";
  
 });
-document.getElementById("btnDelete").addEventListener("click",  function(e){
+document.getElementById("btnDelete").addEventListener("click",  (e)=>{
     let collid=e.target.parentElement.title;
     e.preventDefault();
     servicea.deleteCollection(collid).then(
-        function()
-        {
+        ()=>        {
             window.location.href="usercollection.html";
         }
     )
 });
 
-document.getElementById("close").addEventListener("click",  function(e){
+document.getElementById("close").addEventListener("click",  (e)=>{
     e.preventDefault();
     var modal=document.getElementById("modal");
     modal.style.display="none";
@@ -51,7 +53,7 @@ document.getElementById("close").addEventListener("click",  function(e){
     document.getElementById("txtdesc").value="";
 });
 
-document.getElementById("closebtn").addEventListener("click",  function(e){
+document.getElementById("closebtn").addEventListener("click",  (e)=>{
     e.preventDefault();
     var modal=document.getElementById("modal");
     modal.style.display="none";
@@ -59,7 +61,7 @@ document.getElementById("closebtn").addEventListener("click",  function(e){
     document.getElementById("txtdesc").value="";
 });
 
-document.getElementById("save").addEventListener("click",  function(e){
+document.getElementById("save").addEventListener("click",  (e)=>{
     e.preventDefault();
    let name= document.getElementById("txtname").value;
    let desc= document.getElementById("txtdesc").value;

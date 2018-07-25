@@ -53,22 +53,6 @@
           "Description": "Maharaja Bhog",
           "cuisines": "Indian, Rajasthani",
           "city": "Dubai"
-        },
-        {
-          "id": "18379660",
-          "Name": "Cafe Azzure",
-          "Img_Url": "https://b.zmtcdn.com/data/res_imagery/18379660_RESTAURANT_048602727d766e01701155830d7f045d.jpg?output-format=webp",
-          "Description": "Cafe Azzure",
-          "cuisines": "Cafe, Continental, Italian, Burger",
-          "city": "Bangalore"
-        },
-        {
-          "id": "51040",
-          "Name": "Truffles",
-          "Img_Url": "https://b.zmtcdn.com/data/pictures/chains/8/51038/c312bf371d4e0aea2021a1fd824054ed.jpg?output-format=webp",
-          "Description": "Truffles",
-          "cuisines": "Cafe, American, Burger, Steak",
-          "city": "Bangalore"
         }
       ]
     },
@@ -76,22 +60,6 @@
       "name": "my col",
       "Description": "my col",
       "restaurants": [
-        {
-          "id": "18038154",
-          "Name": "Panna Vilas Restaurant & Lounge",
-          "Img_Url": "https://b.zmtcdn.com/data/res_imagery/18038154_CHAIN_5b158b681a6e305f6d7d9626c895d9b6.jpg",
-          "Description": "Panna Vilas Restaurant & Lounge",
-          "cuisines": "North Indian, Italian, Chinese",
-          "city": "Udaipur"
-        },
-        {
-          "id": "57833",
-          "Name": "Big Pitcher",
-          "Img_Url": "https://b.zmtcdn.com/data/res_imagery/57833_RESTAURANT_f488ecad8c970d4459cddf4b58326e56.jpg",
-          "Description": "Big Pitcher",
-          "cuisines": "American, Continental, North Indian, Mediterranean, Salad, Steak",
-          "city": "Bangalore"
-        },
         {
           "id": "18536004",
           "Name": "Culture - पुणे",

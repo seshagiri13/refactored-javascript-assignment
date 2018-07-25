@@ -169,6 +169,32 @@ function getcollectiondeatils(params) {
 }
 
 
+function deleteRestaurant(params,id) {
+
+    return new Promise( (resolve, reject)=> {
+        var xhr = new XMLHttpRequest();
+        xhr.open("PUT", 'http://localhost:3000/collections/'+id, true);
+        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        xhr.onload = function () {
+            if (this.status >= 200 && this.status < 300) {
+                resolve(xhr.response);
+            } else {
+                reject({
+                    status: this.status,
+                    statusText: xhr.statusText
+                });
+            }
+        };
+        xhr.onerror =  function (){
+            reject({
+                status: this.status,
+                statusText: xhr.statusText
+            });
+        };
+        xhr.send(JSON.stringify(params));
+    });
+}
+
 
 function getcollectiondetails(param, collectioname) {
     var params = "entity_id=4&count=12&collection_id=" + param;
@@ -332,5 +358,6 @@ module.exports = {
     savecollection: savecollection,
     getcollectiondeatils: getcollectiondeatils,
     deleteCollection: deleteCollection,
-    searchresults:searchresults
+    searchresults:searchresults,
+    deleteRestaurant:deleteRestaurant
 }

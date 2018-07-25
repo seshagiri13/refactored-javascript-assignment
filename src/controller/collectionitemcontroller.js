@@ -6,17 +6,26 @@ var collitemview  = require('../views/collectionitemview');
 import '../css/collectionitem.css';
 import '../css/bootstrap.css';
 import { createStore } from 'redux';
+var state= require('../state/state');
 
 
 
 
-window.onload = ()=>{
+window.onload = ()=>
+{
+    state.store.subscribe(()=>{
+        collitemview.formateachuserCollection(state.store.getState().parsedata,state.store.getState().parsedata.name); 
+    })
     let params = (new URL(document.location)).searchParams;
 var collid = params.get("collid");
 let collname = params.get("collname");
 document.getElementById("collid").title=collid;
 servicea.getcollectiondeatils(collid,collname).then((data)=>{
-    collitemview.formateachuserCollection(JSON.parse(data),collname);
+   // collitemview.formateachuserCollection(JSON.parse(data),collname);
+   // state.getinitailstate(data);
+   // state.initialState=data;
+   let parsedata=JSON.parse(data);
+    state.store.dispatch({type: 'initiate', data:{parsedata}})
 });
 var details;
 servicea.geteachusercollection(collid).then(function(data)

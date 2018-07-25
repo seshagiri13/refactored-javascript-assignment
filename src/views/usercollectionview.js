@@ -8,13 +8,21 @@ function formatusercollection(collection) {
         card.style.position = "relative";
         var cardheader = document.createElement('div');
         cardheader.className = 'card-header';
-        cardheader.innerHTML = '<strong>' + collection[coll].name + '</strong>';
+        cardheader.innerHTML = '<strong title="header">' + collection[coll].name + '</strong>';
         card.appendChild(cardheader);
         cardheader.addEventListener("dragstart", function drag(e) {
             e.dataTransfer.setData("divId", e.target.parentElement.id);
             e.stopPropagation();
         });
         cardheader.addEventListener("click", function click(e) {
+            if(e.target.title=="header")
+            {
+                var collid = e.target.parentElement.parentElement.id;
+            var collname = e.target.parentElement.parentElement.title;
+            window.location.href = "collectionitems.html?collid=" + collid + "&collname=" + collname;
+            e.stopPropagation();
+            return; 
+            }
             var collid = e.target.parentElement.id;
             var collname = e.target.parentElement.title;
             window.location.href = "collectionitems.html?collid=" + collid + "&collname=" + collname;

@@ -1,5 +1,6 @@
 
 let userKey = '90a96745b76dadf7a7e66bf0c24b2ae8';
+var state= require('../state/state');
 
 function getallusercollection() {
     return new Promise( (resolve, reject)=> {
@@ -150,7 +151,8 @@ function getcollectiondeatils(params) {
         xhr.open("GET", 'http://localhost:3000/collections/'+ params, true);
         xhr.onload = function () {
             if (this.status >= 200 && this.status < 300) {
-                resolve(xhr.response);
+                let parsedata=JSON.parse(xhr.response);
+                state.store.dispatch({type: 'initiate', data:{parsedata}});
             } else {
                 reject({
                     status: this.status,
@@ -326,7 +328,7 @@ function deleteCollection(param) {
         var xhr = new XMLHttpRequest();
         xhr.open("DELETE", 'http://localhost:3000/collections/' + param);
         xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        xhr.onload =  ()=> {
+        xhr.onload = function () {
             if (this.status >= 200 && this.status < 300) {
                 resolve(xhr.response);
             } else {
@@ -336,7 +338,7 @@ function deleteCollection(param) {
                 });
             }
         };
-        xhr.onerror =  ()=> {
+        xhr.onerror = function () {
             reject({
                 status: this.status,
                 statusText: xhr.statusText

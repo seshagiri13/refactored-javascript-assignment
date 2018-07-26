@@ -1,6 +1,11 @@
 var state= require('../state/state');
 var servicea  = require('../service/services');
 
+
+state.store.subscribe(()=>{
+    formateachuserCollection(state.store.getState().parsedata,state.store.getState().parsedata.name); 
+});
+
 function formateachuserCollection(collection, collectioname) {
     let collname = document.querySelector("#collectioname");
     collname.innerHTML = collectioname;

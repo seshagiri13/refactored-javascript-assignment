@@ -39,53 +39,28 @@
           "city": "Kanpur"
         },
         {
-          "id": "18378852",
-          "Name": "Effingut Brewerkz",
-          "Img_Url": "https://b.zmtcdn.com/data/res_imagery/18378852_RESTAURANT_6abd62d7e9333c5416121975d95cb816.jpg",
-          "Description": "Effingut Brewerkz",
-          "cuisines": "Continental, North Indian, Mughlai, Burmese",
-          "city": "Pune"
-        },
-        {
           "id": "206488",
           "Name": "Maharaja Bhog",
           "Img_Url": "https://b.zmtcdn.com/data/res_imagery/206488_RESTAURANT_66046ea534ad7f685cd4ba184d39e178.jpg?output-format=webp",
           "Description": "Maharaja Bhog",
           "cuisines": "Indian, Rajasthani",
           "city": "Dubai"
+        },
+        {
+          "id": "2300979",
+          "Name": "Mocha ",
+          "Description": "Mocha ",
+          "Img_Url": "https://b.zmtcdn.com/data/reviews_photos/28e/e317c367678233a0b047237232ad928e_1520952702.jpg?output-format=webp",
+          "cuisines": "Cafe",
+          "city": "Kanpur"
         }
       ]
     },
     {
-      "name": "my col",
-      "Description": "my col",
-      "restaurants": [
-        {
-          "id": "18536004",
-          "Name": "Culture - पुणे",
-          "Img_Url": "https://b.zmtcdn.com/data/pictures/4/18536004/5b53cb89b5374a4f9e113c413f0fc928.jpg",
-          "Description": "Culture - पुणे",
-          "cuisines": "Continental, North Indian, Italian, Mediterranean, European",
-          "city": "Pune"
-        },
-        {
-          "id": "59132",
-          "Name": "The Black Rabbit",
-          "Description": "The Black Rabbit",
-          "Img_Url": "https://b.zmtcdn.com/data/pictures/2/59132/18cca37cab0b7372adb7b07d28dd789a.jpg",
-          "cuisines": "Continental, Salad, Burger, Finger Food, Pizza",
-          "city": "Bangalore"
-        },
-        {
-          "id": "18463068",
-          "Name": "SushiNow",
-          "Description": "SushiNow",
-          "Img_Url": "https://b.zmtcdn.com/data/pictures/chains/2/18288332/5916981d6fbc6395e2c599581544f76e.jpg?output-format=webp",
-          "cuisines": "Japanese, Sushi",
-          "city": "Lisboa"
-        }
-      ],
-      "id": "QHPypSJ"
+      "name": "asd",
+      "Description": "asd",
+      "restaurants": [],
+      "id": "9pxBCNl"
     }
   ],
   "restaurants": [

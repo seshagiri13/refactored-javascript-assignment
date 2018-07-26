@@ -1,5 +1,4 @@
 import { createStore } from 'redux';
-var collitemview = require('../views/collectionitemview');
 
 function reducer(state, action) {
     switch (action.type) {
@@ -21,7 +20,13 @@ function reducer(state, action) {
 
 }
 
-const store = createStore(reducer);
+const store = createStore(reducer,{
+    "id": "id",
+    "name": "",
+    "Description": "",
+    "restaurants": [
+    ]
+});
 
 
 
